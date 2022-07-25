@@ -91,7 +91,11 @@ function addToCart(element,productArr){
 }
 window.onload=function(){
     let totalCartItems=document.getElementById("total-cart-items");
-    totalCartItems.innerHTML=`<p class="mb-0">${JSON.parse(localStorage.getItem("totalItems"))}</p>`;
+    let totalItems=JSON.parse(localStorage.getItem("totalItems"));
+    if(totalItems==null){
+        totalItems=0;
+    }
+    totalCartItems.innerHTML=`<p class="mb-0">${totalItems}</p>`;
     localStorage.removeItem("searchArr"); 
     main();
 }

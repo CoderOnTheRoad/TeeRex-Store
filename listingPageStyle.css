@@ -38,6 +38,7 @@
    top: -5px;
    width: 25px;
    height: 25px;
+   z-index: 1;
    
 
 }
@@ -61,4 +62,36 @@
 #products-container{
    width: 100vw !important;
 }
+}
+/* body{
+   margin: -30px;
+} */
+.filters-container{
+   overflow-y: scroll;
+}
+#products-container{
+   overflow-y: scroll;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+#products-container::-webkit-scrollbar{
+   display: none;
+ }
+ 
+ /* Hide scrollbar for IE, Edge and Firefox */
+ #products-container{ 
+   -ms-overflow-style: none;  /* IE and Edge */
+   scrollbar-width: none;  /* Firefox */
+ }
+ .filters-container::-webkit-scrollbar,body::-webkit-scrollbar{
+   display: none;
+ }
+ .filters-container,body {
+   -ms-overflow-style: none;  /* IE and Edge */
+   scrollbar-width: none;  /* Firefox */
+ }
+.card-header{
+   background-color: burlywood;
+}
+body{
+   background-color: wheat;
 }
