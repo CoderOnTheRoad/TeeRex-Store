@@ -75,6 +75,7 @@ function addToCart(element,productArr){
             localStorage.setItem("totalItems",JSON.stringify(JSON.parse(localStorage.getItem("totalItems"))+1));
             totalCartItems.innerHTML=`<p class="mb-0">${JSON.parse(localStorage.getItem("totalItems"))}</p>`;
         }else{
+            window.alert("can not add more of this item");
             console.log("can not add more of this item");
         }
     }else{

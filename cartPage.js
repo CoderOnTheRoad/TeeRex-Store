@@ -78,6 +78,7 @@ function increaseCartQty(element){
         }
 
     }else{
+        window.alert("can not add more items");
         console.log("can not add more items");
     }
 
