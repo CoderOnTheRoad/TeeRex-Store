@@ -1,0 +1,16 @@
+
+
+#cart-products-container{
+    width: 100vw;
+    height: auto;
+    z-index: 1;
+    display: flex;
+    overflow-y: scroll;
+    /* padding-top: 100px; */;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* .card{
+    height: 50px;
+} */

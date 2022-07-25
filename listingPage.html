@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<link rel="stylesheet" href="listingPageStyle.css">
+
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark" style="width:100vw;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="listingPage.html">Navbar</a>
+            <div class="d-flex flex-row " style="position:absolute; right: 40px;">
+                <div>
+                    <a class="navbar-brand row-md-0" href="#" id="product-link">Navbar</a>
+                </div>
+                <div class="d-flex flex-column justify-content-center  align-content-center" id="cart-container" >
+                    <div id="total-cart-items" style="color:white;" class="align-self-start border-0 m-0 p-0"></div>
+                    <a href="cartPage.html"><i class="fa-solid fa-cart-shopping" style="color:white;" class="align-self-end"></i></a>
+                    
+                </div>
+
+            </div>
+        </div>
+    </nav>
+    <nav class="navbar bg-light" style="background-color:white !important;">
+        <div class="container-fluid" style="justify-content:flex-end;display: flex;flex-direction: row;flex-wrap: nowrap;">
+            <div class="d-flex" >
+                <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" id="search-input">
+                <button class="btn btn-outline-success" type="" onclick="showSearchResults()" id="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+          <button class="btn btn-outline-success btn-primary" type="button" id="filter-button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><i class="fa-solid fa-filter"></i></button>
+        </div>
+    </nav>
+    <div class="collapse" id="collapseExample">
+        <div id="filters-container1" class="w-100 border border-2 p-2 filters-container" style="height:80vh;">
+            <div class="card">
+                <div class="card-header">
+                  Filter 1
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item p-0 ps-1 border-0">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="filter1option1">
+                            <label class="form-check-label" for="filter1option1">
+                            option1
+                            </label>
+                        </div>
+                  </li>
+                  <li class="list-group-item p-0 ps-1 border-0">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="filter1option2">
+                            <label class="form-check-label" for="filter1option2">
+                            option2
+                            </label>
+                        </div>
+                  </li>
+                  <li class="list-group-item p-0 ps-1 border-0">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="filter1option3">
+                            <label class="form-check-label" for="filter1option3">
+                            option3
+                            </label>
+                        </div>
+                  </li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                  Filter 2
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item p-0 ps-1 border-0">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="filter2option1">
+                            <label class="form-check-label" for="filter2option1">
+                            option1
+                            </label>
+                        </div>
+                  </li>
+                  <li class="list-group-item p-0 ps-1 border-0">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="filter2option2">
+                            <label class="form-check-label" for="filter2option2">
+                            option2
+                            </label>
+                        </div>
+                  </li>
+                  <li class="list-group-item p-0 ps-1 border-0">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="filter2option3">
+                            <label class="form-check-label" for="filter2option3">
+                            option3
+                            </label>
+                        </div>
+                  </li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                  Filter 3
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item p-0 ps-1 border-0">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="filter3option1">
+                            <label class="form-check-label" for="filter3option1">
+                            option1
+                            </label>
+                        </div>
+                  </li>
+                  <li class="list-group-item p-0 ps-1 border-0">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="filter3option2">
+                            <label class="form-check-label" for="filter3option2">
+                            option2
+                            </label>
+                        </div>
+                  </li>
+                  <li class="list-group-item p-0 ps-1 border-0">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="filter3option3">
+                            <label class="form-check-label" for="filter3option3">
+                            option3
+                            </label>
+                        </div>
+                  </li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                  Filter 4
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item p-0 ps-1 border-0">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="filter4option1">
+                            <label class="form-check-label" for="filter4option1">
+                            option1
+                            </label>
+                        </div>
+                  </li>
+                  <li class="list-group-item p-0 ps-1 border-0">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="filter4option2">
+                            <label class="form-check-label" for="filter4option2">
+                            option2
+                            </label>
+                        </div>
+                  </li>
+                  <li class="list-group-item p-0 ps-1 border-0">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="filter4option3">
+                            <label class="form-check-label" for="filter4option3">
+                            option3
+                            </label>
+                        </div>
+                  </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <section class="d-flex flex-row flex-nowrap" style="width:100vw;height:80vh">
+        <div id="filters-container" class="w-25 border border-2 p-2 filters-container" style="height:80vh;">
+            <div class="card">
+                <div class="card-header">
+                  Gender
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item p-0 ps-1 border-0">
+                        <div class="form-check">
+                            <input class="form-check-input filter" type="checkbox" value="men" id="filter1option1" data-type="gender">
+                            <label class="form-check-label" for="filter1option1">
+                            Men
+                            </label>
+                        </div>
+                  </li>
+                  <li class="list-group-item p-0 ps-1 border-0">
+                        <div class="form-check">
+                            <input class="form-check-input filter" type="checkbox" value="women" id="filter1option2" data-type="gender">
+                            <label class="form-check-label" for="filter1option2">
+                            Women
+                            </label>
+                        </div>
+                  </li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                  Color
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item p-0 ps-1 border-0">
+                        <div class="form-check">
+                            <input class="form-check-input filter" type="checkbox" value="pink" id="filter2option1" data-type="color">
+                            <label class="form-check-label" for="filter2option1">
+                            pink
+                            </label>
+                        </div>
+                  </li>
+                  <li class="list-group-item p-0 ps-1 border-0">
+                        <div class="form-check">
+                            <input class="form-check-input filter" type="checkbox" value="blue" id="filter2option2" data-type="color">
+                            <label class="form-check-label" for="filter2option2">
+                            blue
+                            </label>
+                        </div>
+                  </li>
+                  <li class="list-group-item p-0 ps-1 border-0">
+                        <div class="form-check">
+                            <input class="form-check-input filter" type="checkbox" value="black" id="filter2option3" data-type="color">
+                            <label class="form-check-label" for="filter2option3">
+                            black
+                            </label>
+                        </div>
+                  </li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                  Type
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item p-0 ps-1 border-0">
+                        <div class="form-check">
+                            <input class="form-check-input filter" type="checkbox" value="polo" id="filter3option1" data-type="type">
+                            <label class="form-check-label" for="filter3option1">
+                            polo
+                            </label>
+                        </div>
+                  </li>
+                  <li class="list-group-item p-0 ps-1 border-0">
+                        <div class="form-check">
+                            <input class="form-check-input filter" type="checkbox" value="round" id="filter3option2"data-type="type">
+                            <label class="form-check-label" for="filter3option2">
+                            round
+                            </label>
+                        </div>
+                  </li>
+                  <li class="list-group-item p-0 ps-1 border-0">
+                        <div class="form-check">
+                            <input class="form-check-input filter" type="checkbox" value="hoodie" id="filter3option3" data-type="type">
+                            <label class="form-check-label" for="filter3option3">
+                            hoodie
+                            </label>
+                        </div>
+                  </li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                  Price
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item p-0 ps-1 border-0">
+                        <div class="form-check">
+                            <input class="form-check-input filter" type="checkbox" data-min="100" data-max="200" id="filter4option1" data-type="price">
+                            <label class="form-check-label" for="filter4option1">
+                            Rs: 100-200
+                            </label>
+                        </div>
+                  </li>
+                  <li class="list-group-item p-0 ps-1 border-0">
+                        <div class="form-check">
+                            <input class="form-check-input filter" type="checkbox" data-min="200" data-max="300" id="filter4option2" data-type="price">
+                            <label class="form-check-label" for="filter4option2">
+                             Rs: 200-300
+                            </label>
+                        </div>
+                  </li>
+                  <li class="list-group-item p-0 ps-1 border-0">
+                        <div class="form-check">
+                            <input class="form-check-input filter" type="checkbox" data-min="300" data-max="400" id="filter4option3" data-type="price">
+                            <label class="form-check-label" for="filter4option3">
+                                Rs: 300-400
+                            </label>
+                        </div>
+                  </li>
+                  <li class="list-group-item p-0 ps-1 border-0">
+                    <div class="form-check">
+                        <input class="form-check-input filter" type="checkbox" data-min="400" data-max="500" id="filter4option4" data-type="price">
+                        <label class="form-check-label" for="filter4option4">
+                            Rs: 400-500
+                        </label>
+                    </div>
+              </li>
+                </ul>
+            </div>
+
+        </div>
+        <div id="products-container" class="h-100 w-75 border border-2">
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/eeea8987ec.js" crossorigin="anonymous"></script>
+<script src="search.js"></script>
+<script src="listingPage.js"></script>
+<script src="filter.js"></script>
+
+</body>
+</html>
